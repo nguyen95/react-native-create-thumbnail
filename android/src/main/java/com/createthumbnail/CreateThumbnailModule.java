@@ -191,7 +191,7 @@ public class CreateThumbnailModule extends ReactContextBaseJavaModule {
         Bitmap image = retriever.getFrameAtTime(time * 1000, MediaMetadataRetriever.OPTION_CLOSEST_SYNC);
         try {
             retriever.release();
-        } catch(IOException e) {
+        } catch(Exception e) {
             e.printStackTrace();
         }
         if (image == null) {
